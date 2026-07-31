@@ -136,7 +136,6 @@ body {
     z-index: 1000;
 }
 
-/* Input and buttons */
 button,
 input,
 .card {
@@ -155,7 +154,6 @@ input {
     opacity: 1; /* Makes sure the color isn't faded */
 }
 
-/* Card stack */
 .cards-container {
     position: relative;
     width: 220px;

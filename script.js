@@ -35,7 +35,6 @@ function decide(){
     window.location.href = "result.html";
 }
 
-// Only run this on result.html
 if (document.getElementById("result")) {
 
     const choices =
