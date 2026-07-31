@@ -6,7 +6,7 @@ A simple desktop app that helps you make decisions.
 
 Decision-maker is an Electron application where users can add 2 or more choices and let the app randomly select one option.
 
-## Technologies Used
+### Technologies Used
 - Electron
 - JavaScript
 - HTML
@@ -14,7 +14,7 @@ Decision-maker is an Electron application where users can add 2 or more choices 
 - Node.js
 - Aseprite (pixel-art assets)
 
-## Features
+### Features
 
 - Add custom choices
 - Randomly select one option
