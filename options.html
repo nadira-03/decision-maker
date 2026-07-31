@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Results</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css"/>
+    </head>
+
+    <body>
+        <div class="title-bar">
+            <div class="title">Decision Maker</div>
+            <div class="window-buttons">
+                <button id="back" onclick="window.location.href='index.html'">
+                    <img src="assets/back.png">
+                </button>
+                <button id="minimize">
+                    <img src="assets/minimise.png">
+                </button>
+                <button id="close">
+                    <img src="assets/closebutton.png">
+                </button>
+            </div>
+        </div>
+        
+        <div class="app">
+            <h1>Add Your Choices</h1>
+            <input id="optionInput" placeholder="Enter an option">
+            <button class="big-button" onclick="addOption()">Add</button>
+            <div id="cards" class="cards-container"></div>
+            <br>
+            <button class="big-button decide-button" onclick="decide()">Decide!</button>
+        </div>
+        <script src="script.js"></script>
+        <script src="renderer.js"></script>
+    </body>
+</html>

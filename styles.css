@@ -1,0 +1,331 @@
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+p {
+    font-size: 14px;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* removes scrollbars */
+}
+
+.title-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 10px 0 10px;
+    -webkit-app-region: drag;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2c354d;
+    margin-left: 28px;
+}
+
+.window-buttons {
+    display: flex;
+    gap: 8px;
+    -webkit-app-region: no-drag;
+}
+
+.window-buttons button {
+    width: 25px;
+    height: 25px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.window-buttons button img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.window-buttons button:hover img {
+    transform: scale(1.1);
+}
+
+.window-buttons button.no-hover:hover img {
+    transform: none;
+    filter: none;
+    background: inherit;
+    box-shadow: none;
+}
+
+#back {
+    position: absolute;
+    top: 8px;
+    left: 10px;
+}
+
+body {
+    background-image: url(assets/background.png);
+    background-size: 100% 100%;
+    background-position: center;
+    font-family: "Pixelify Sans", sans-serif;
+    color: #2c354d;
+    user-select: none;
+    -webkit-app-region: drag;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app {
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 20px;
+    padding-top: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.big-button {
+    width: 140px;
+    height: 45px;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    flex-shrink: 0;
+    background-image: url("assets/button.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    border: none;
+    font-family: "Pixelify Sans", sans-serif;
+    color: #f5ffe8;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.15s ease;
+}
+
+.big-button:hover {
+    transform: translateY(2px);
+}
+
+.decide-button {
+    margin-top: -80px;
+
+    position: relative;
+    z-index: 1000;
+}
+
+/* Input and buttons */
+button,
+input,
+.card {
+    -webkit-app-region: no-drag;
+}
+
+input {
+    width: 250px;
+    height: 30px;
+}
+
+#optionInput::placeholder {
+    font-family: "Pixelify sans", sans-serif; /* or your chosen font */
+    font-size: 14px;
+    color: #d3d3d3;
+    opacity: 1; /* Makes sure the color isn't faded */
+}
+
+/* Card stack */
+.cards-container {
+    position: relative;
+    width: 220px;
+    height: 120px;
+    margin: 10px 0;
+    flex-shrink: 0;
+    overflow: visible;
+}
+
+.card {
+    position: absolute;
+    left: 20px;
+    top: 0;
+    width: 180px;
+    height: 60px;
+    padding: 10px;
+    font-size: 14px;
+    background: white;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.result-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* Centers both horizontally */
+    justify-content: center;
+    margin-top: 0px;      /* Move everything down if needed */
+}
+
+.result-title {
+    color: #2c354d;
+    margin-bottom: 25px;
+}
+
+#result {
+    font-size: 40px;
+    color: #ff5277;
+    font-family: "Pixelify Sans", sans-serif;
+    transform: scale(0);
+    position: relative;
+    z-index: 1;
+}
+
+.show-result {
+    animation: pop 0.5s ease-out forwards;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(0);
+    }
+
+    70% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.result-wrapper {
+    position: relative;
+    width: 180px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.star {
+    position: absolute;
+    width: 24px;
+    opacity: 0;
+    z-index: 0;
+}
+
+.star1 { left:-20px; top:10px; }
+.star2 { right:-20px; top:10px; }
+
+.star3 { left:-30px; bottom:10px; }
+.star4 { right:-30px; bottom:10px; }
+
+.star5 { left:10px; top:-25px; }
+.star6 { right:10px; top:-25px; }
+
+.star7 { left:0px; bottom:-25px; }
+.star8 { right:0px; bottom:-25px; }
+
+.star9 { left:-30px; top:0px}
+.star10 { right:-30px; top:0px}
+
+.show-star {
+    animation: sparkle 0.8s ease-out forwards;
+}
+
+@keyframes sparkle {
+
+    0%{
+        opacity:0;
+        transform:scale(0);
+    }
+
+    30%{
+        opacity:1;
+    }
+
+    100%{
+        opacity:0;
+        transform:translateY(-40px) scale(1.5);
+    }
+
+}
+
+/*.star1.show-star {
+    animation: star1 0.8s forwards;
+}
+
+@keyframes star1 {
+    from {
+        opacity:0;
+        transform:scale(0);
+    }
+    to {
+        opacity:0;
+        transform:translate(-40px,-40px) scale(1.5);
+    }
+}
+
+.star2.show-star {
+    animation: star2 0.8s forwards;
+}
+
+@keyframes star2 {
+    from {
+        opacity:0;
+        transform:scale(0);
+    }
+    to {
+        opacity:0;
+        transform:translate(40px,-40px) scale(1.5);
+    }
+}*/
+
+.star3.show-star,
+.star4.show-star,
+.star7.show-star,
+.star8.show-star,
+.star9.show-star,
+.star10.show-star {
+    animation: sparkle-bottom 0.8s ease-out forwards;
+}
+
+@keyframes sparkle-bottom {
+    0% {
+        opacity:0;
+        transform:scale(0);
+    }
+
+    30% {
+        opacity:1;
+    }
+
+    100% {
+        opacity:0;
+        transform:translateY(40px) scale(1.5);
+    }
+}
