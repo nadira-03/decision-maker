@@ -66,7 +66,8 @@ Nadira Tasnim
 ## Version History
 
 * 0.1
-    * Initial Release
+    * First Stable Release
+    * [Release](https://github.com/nadira-03/decision-maker/releases/tag/v.0.1)
 
 ## License
 
