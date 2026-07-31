@@ -8,6 +8,7 @@
   },
   "build": {
     "appId": "com.example.decisionmaker",
+    "icon": "assets/appicon.ico",
     "productName": "Decision Maker",
     "win": {
       "target": "nsis"

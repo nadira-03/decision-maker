@@ -1,5 +1,5 @@
 const { app, BrowserWindow, ipcMain } = require("electron");
-
+const path = require("path");
 
 let win;
 
@@ -16,6 +16,8 @@ function createWindow() {
         frame: false,
 
         transparent: false,
+
+        icon: path.join(__dirname, "assets", "appicon.ico"),
 
         webPreferences: {
             nodeIntegration: true,

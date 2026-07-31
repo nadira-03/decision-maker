@@ -35,7 +35,7 @@ html, body {
     font-size: 20px;
     font-weight: bold;
     color: #2c354d;
-    margin-left: 28px;
+    margin-left: 12px;
 }
 
 .window-buttons {
@@ -73,8 +73,8 @@ html, body {
 
 #back {
     position: absolute;
-    top: 8px;
-    left: 10px;
+    top: 42px;
+    left: 25px;
 }
 
 body {
@@ -105,6 +105,23 @@ body {
     text-align: center;
 }
 
+.cat {
+    position: absolute;
+
+    bottom: 36px;
+    left: 39px;
+
+    width: 68px;
+    height: 61px;
+
+    background-image: url("assets/cat_ani.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+
+    image-rendering: pixelated;
+    transform: scale(1.5);
+}
+
 .big-button {
     width: 140px;
     height: 45px;
@@ -125,13 +142,12 @@ body {
     transition: transform 0.15s ease;
 }
 
-.big-button:hover {
+.big-button:not(:disabled):hover {
     transform: translateY(2px);
 }
 
 .decide-button {
     margin-top: -80px;
-
     position: relative;
     z-index: 1000;
 }
@@ -183,6 +199,7 @@ input {
 .result-container {
     display: flex;
     flex-direction: column;
+    position: absolute;
     align-items: center;   /* Centers both horizontally */
     justify-content: center;
     margin-top: 0px;      /* Move everything down if needed */
@@ -195,7 +212,7 @@ input {
 
 #result {
     font-size: 40px;
-    color: #ff5277;
+    color: #692464;
     font-family: "Pixelify Sans", sans-serif;
     transform: scale(0);
     position: relative;
@@ -236,20 +253,20 @@ input {
     z-index: 0;
 }
 
-.star1 { left:-20px; top:10px; }
-.star2 { right:-20px; top:10px; }
+.star1 { left:-20px; top: 20px; }
+.star2 { right:-15px; top: 30px; }
 
 .star3 { left:-30px; bottom:10px; }
-.star4 { right:-30px; bottom:10px; }
+.star4 { right:-25px; bottom:30px; }
 
-.star5 { left:10px; top:-25px; }
-.star6 { right:10px; top:-25px; }
+.star5 { left:0px; top:20px; }
+.star6 { right:10px; top:25px; }
 
-.star7 { left:0px; bottom:-25px; }
-.star8 { right:0px; bottom:-25px; }
+.star7 { left:15px; bottom:-20px; }
+.star8 { right:0px; bottom:-20px; }
 
-.star9 { left:-30px; top:0px}
-.star10 { right:-30px; top:0px}
+.star9 { left:-30px; top:30px}
+.star10 { right:-20px; top:-10px}
 
 .show-star {
     animation: sparkle 0.8s ease-out forwards;
